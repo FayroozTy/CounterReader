@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="right"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:padding="10dp"
+
+
+        >
+          <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+
+
+           >
+            <EditText
+                android:id="@+id/edt_serviceNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:hint="############"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+
+                android:inputType="number"
+                />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="رقم الاشتراك"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+                />
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="2"
+
+           >
+            <EditText
+            android:id="@+id/edt_date_currentCounterNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="############"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+                android:layout_weight="1"
+                android:editable="false"
+
+            />
+
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="تاريخ القراءة "
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+        >
+            <EditText
+                android:id="@+id/txt_currentRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="############"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:inputType="number"
+
+                />
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="رقم العداد الحالي"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/neo_sans_arabic_bold"
+            android:background="#AD130C"
+            android:onClick="startQRScanner_current"
+            android:layout_weight="1"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+
+            >
+            <EditText
+                android:id="@+id/edt_currentCounterNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="############"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="القراءة الحالية"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="5dp"
+            android:weightSum="2"
+
+            >
+            <EditText
+                android:id="@+id/txt_newRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="############"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text=" رقم العداد الجديد"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#AD130C"
+                android:onClick="startQRScanner_new"
+                android:layout_weight="1"
+                />
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+
+            >
+            <EditText
+                android:id="@+id/edt_newCounterNumber"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:text="0"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:editable="false"
+
+                />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="قراءة العداد الجديد"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+
+            >
+            <RadioGroup
+                android:id="@+id/radioSex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <RadioButton
+                    android:id="@+id/radioFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تالف" />
+                <RadioButton
+                    android:id="@+id/radioMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="صالح"
+                    android:checked="true" />
+
+
+
+            </RadioGroup>
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="حالة العداد القديم"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+
+            >
+            <EditText
+                android:id="@+id/lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="############"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:editable="false"
+                />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="الاحداث السيني"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+
+            >
+            <EditText
+                android:id="@+id/lon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="############"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:textSize="14dp"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:editable="false"
+                />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="الاحداث الصادي"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:weightSum="2"
+
+            >
+            <EditText
+            android:id="@+id/notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="############"
+            android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:textSize="14dp"
+                android:layout_weight="1"
+            />
+
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="ملاحظات"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="#008577"
+                android:layout_weight="1"
+
+                />
+
+
+        </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:gravity="bottom"
+        android:padding="5dp"
+        android:layout_marginTop="10dp"
+
+        >
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:text="حفظ"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/neo_sans_arabic_bold"
+            android:background="@android:color/darker_gray"
+            android:onClick="saveData"
+
+            />
+
+
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+             android:layout_weight="3"  >
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="استعلام عن  جميع البيانات المخزنة"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="@android:color/darker_gray"
+                android:onClick="getData"
+                  android:layout_weight="1"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:lineSpacingExtra="5dp"
+
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text= "استعلام عن اخر ١٠ سجل"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="@android:color/darker_gray"
+                android:onClick="getData10"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:lineSpacingExtra="5dp"
+                />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:text="استعلام عن اخر ٢٠ سجل"
+                android:textColor="@android:color/black"
+                android:fontFamily="@font/neo_sans_arabic_bold"
+                android:background="@android:color/darker_gray"
+                android:onClick="getData20"
+                android:padding="3dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="5dp"
+
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
